@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfRenderingBecnhmark.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wpfRenderingBecnhmark="clr-namespace:WpfRenderingBecnhmark"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>FPS: </Label>
+            <wpfRenderingBecnhmark:FpsCounterLabel 
+                ExtraTrhrottle="True"
+                ExtraThrottleDelayMs="0.0001"
+                />
+            <Label> Animation events:</Label>
+            <wpfRenderingBecnhmark:AnimationFrameCounterLabel/>
+           
+            
+        </StackPanel>
+        <Grid>
+            
+        </Grid>
+        
+    </StackPanel>
+</Window>
