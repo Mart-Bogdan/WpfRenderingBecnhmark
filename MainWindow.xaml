@@ -3,21 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:wpfRenderingBecnhmark="clr-namespace:WpfRenderingBecnhmark"
         Title="MainWindow" Height="350" Width="525">
-    <StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Label>FPS: </Label>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+            <Label>FPS:</Label>
             <wpfRenderingBecnhmark:FpsCounterLabel 
-                ExtraTrhrottle="True"
+                ExtraTrhrottle="False"
                 ExtraThrottleDelayMs="0.0001"
                 />
-            <Label> Animation events:</Label>
+            <Label>Animation events:</Label>
             <wpfRenderingBecnhmark:AnimationFrameCounterLabel/>
-           
-            
+
+
         </StackPanel>
-        <Grid>
-            
+        <Grid Grid.RowSpan="2">
+
         </Grid>
-        
-    </StackPanel>
+
+    </Grid>
 </Window>
